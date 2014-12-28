@@ -1,0 +1,12 @@
+<ion-view view-title="Concerns">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="concern in concerns" back-img="{{ incrementColor($index, concerns.length) }}"
+                class="wbf-list-item item-icon-right" href="#/app/concerns/{{ concern.name }}">
+                {{ concern.name }}
+                <span class="badge badge-calm">10 / 2</span>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

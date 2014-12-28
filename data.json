@@ -1,0 +1,69 @@
+{
+    "concerns": {
+        "anxiety": {
+            "name": "Anxiety",
+            "options": {
+                "panic": "having a panic attack",
+                "stress": "really stressed out"
+            }
+        },
+        "depression": {
+            "name": "Depression",
+            "options": {
+                "depressed": "feeling depressed",
+                "want-to-quit": "feel like quitting"
+            }
+        },
+        "alcohol": {
+            "name": "Alcohol"
+        },
+        "lust": {
+            "name": "Lust"
+        },
+        "addiction": {
+            "name": "Addiction"
+        },
+        "grief": {
+            "name": "Grief"
+        },
+        "marriage": {
+            "name": "Marriage"
+        },
+        "anger": {
+            "name": "Anger"
+        },
+        "money": {
+            "name": "Money"
+        },
+        "debt": {
+            "name": "Debt"
+        },
+        "porno": {
+            "name": "Pornography"
+        },
+        "sickness": {
+            "name": "Sickness"
+        },
+        "focus": {
+            "name": "Focus"
+        },
+        "love": {
+            "name": "Love"
+        },
+        "mind": {
+            "name": "Mind"
+        },
+        "lying": {
+            "name": "Lying"
+        },
+        "stealing": {
+            "name": "Stealing"
+        },
+        "cheating": {
+            "name": "Cheating"
+        },
+        "idolatry": {
+            "name": "idolatry"
+        }
+    }
+}
