@@ -2,13 +2,20 @@ angular.module("wbf.services", [])
 
 .directive('backImg', function() {
     return function(scope, element, attrs) {
-        var color = attrs.backImg;
-        console.log('Service color = ', color);
-        // var color = attrs.backColor;
+        var url = attrs.backImg;
         var content = element.find('a');
-        content.css({
-            // 'background-image': 'url(' + url + ')',
-            // 'background-size': 'cover',
+        // content.css({
+        //     'background-image': 'url(' + url + ')',
+        //     'background-size': 'cover'
+        // });
+    };
+})
+
+.directive('backColor', function() {
+    return function(scope, element, attrs) {
+        var color = attrs.backColor;
+        var content = element.find('a'); // only used if an anchor is present
+        element.css({
             'height': '50px',
             'background-color': color
         });

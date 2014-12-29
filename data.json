@@ -1,69 +1,76 @@
 {
     "concerns": {
-        "anxiety": {
-            "name": "Anxiety",
-            "options": {
-                "panic": "having a panic attack",
-                "stress": "really stressed out"
-            }
-        },
-        "depression": {
-            "name": "Depression",
-            "options": {
-                "depressed": "feeling depressed",
-                "want-to-quit": "feel like quitting"
-            }
-        },
-        "alcohol": {
-            "name": "Alcohol"
-        },
-        "lust": {
-            "name": "Lust"
-        },
         "addiction": {
+            "icon": "ion-flask",
             "name": "Addiction"
         },
-        "grief": {
-            "name": "Grief"
-        },
-        "marriage": {
-            "name": "Marriage"
+        "alcohol": {
+            "icon": "ion-wineglass",
+            "name": "Alcohol"
         },
         "anger": {
+            "icon": "ion-android-hand",
             "name": "Anger"
         },
-        "money": {
-            "name": "Money"
+        "anxiety": {
+            "icon": "ion-alert-circled",
+            "name": "Anxiety"
+        },
+        "cheating": {
+            "icon": "ion-arrow-graph-down-left",
+            "name": "Cheating"
         },
         "debt": {
+            "icon": "ion-card",
             "name": "Debt"
         },
+        "depression": {
+            "icon": "ion-cloud",
+            "name": "Depression"
+        },
+        "grief": {
+            "icon": "ion-sad",
+            "name": "Grief"
+        },
+        "idolatry": {
+            "icon": "ion-trophy",
+            "name": "Idolatry"
+        },
+        "love": {
+            "icon": "ion-heart",
+            "name": "Love"
+        },
+        "lust": {
+            "icon": "ion-eye",
+            "name": "Lust"
+        },
+        "lying": {
+            "icon": "ion-flash",
+            "name": "Lying"
+        },
+        "marriage": {
+            "icon": "ion-person-stalker",
+            "name": "Marriage"
+        },
+        "mind": {
+            "icon": "ion-stats-bars",
+            "name": "Mind"
+        },
+        "money": {
+            "icon": "ion-cash",
+            "name": "Money"
+        },
         "porno": {
+            "icon": "ion-aperture",
             "name": "Pornography"
         },
         "sickness": {
+            "icon": "ion-medkit",
             "name": "Sickness"
         },
-        "focus": {
-            "name": "Focus"
-        },
-        "love": {
-            "name": "Love"
-        },
-        "mind": {
-            "name": "Mind"
-        },
-        "lying": {
-            "name": "Lying"
-        },
         "stealing": {
+            "icon": "ion-unlocked",
             "name": "Stealing"
-        },
-        "cheating": {
-            "name": "Cheating"
-        },
-        "idolatry": {
-            "name": "idolatry"
         }
     }
 }

@@ -31,20 +31,20 @@ angular.module('wbf', [
         controller: 'AppCtrl'
     })
 
-    .state('app.search', {
-        url: "/search",
+    .state('app.prepare', {
+        url: "/prepare",
         views: {
             'menuContent': {
-                templateUrl: "templates/search.html"
+                templateUrl: "templates/prepare.html"
             }
         }
     })
 
-    .state('app.browse', {
-            url: "/browse",
+    .state('app.pray', {
+            url: "/pray",
             views: {
                 'menuContent': {
-                    templateUrl: "templates/browse.html"
+                    templateUrl: "templates/pray.html"
                 }
             }
         })
@@ -58,7 +58,7 @@ angular.module('wbf', [
             }
         })
 
-    .state('app.single', {
+    .state('app.concern', {
         url: "/concerns/:concern",
         views: {
             'menuContent': {

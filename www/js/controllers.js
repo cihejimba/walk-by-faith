@@ -33,7 +33,7 @@ angular.module('wbf.controllers', [])
     };
 })
 
-.controller('ConcernsCtrl', function($scope, $firebase, $translate, ColorService) {
+.controller('ConcernsCtrl', function($scope, $state, $firebase, $translate, ColorService) {
 
     var ref = new Firebase("https://radiant-heat-1246.firebaseio.com/concerns");
     var sync = $firebase(ref);
@@ -43,16 +43,34 @@ angular.module('wbf.controllers', [])
 
     $scope.incrementColor = function(index, listCount) {
         var startColor = "#6964ff";
-        var endColor = "#000055";        
+        var endColor = "#00009a";        
         var percent = (index / listCount) * -1;
-        console.log('percent = ', percent);
-        console.log('listCount = ', listCount);
         var newColor = ColorService.shadeBlend(percent, startColor, endColor);
-        console.log('newColor = ', newColor);
         return newColor;
+    }
+
+    $scope.getBadge = function(concernId) {
+        // put join logic here
+        var requestCount = Math.floor((Math.random()*20));
+        var prayedCount = Math.floor((Math.random()*10));
+        var badgeText = "";
+        if (requestCount > 0 && requestCount < 15) {
+            badgeText = requestCount.toString();
+            if (prayedCount) {
+                badgeText += " / " + prayedCount;
+            }
+        }
+        return badgeText;
+    }
+
+    $scope.showConcern = function(concern) {
+        $state.go("app.concern", {"concern": concern });
     }
 })
 
 .controller('ConcernCtrl', function($scope, $stateParams) {
-    $scope.concern = $stateParams.concern;
+    
+    var concern = $stateParams.concern;
+    $scope.title = concern.name;
+
 });

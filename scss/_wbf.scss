@@ -1,9 +1,53 @@
-.wbf-list-item {
-    color: #f0f0f0;
-    font-size: 28px;
-    background-color: $stable;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    text-align: left;
-    text-transform: uppercase;
+.wbf-concerns {
+    .scroll-content {
+        background-color: lighten($royal, 3);
+    }
+    .item {
+        color: $stable;
+        border-color: darken($stable, 30) !important;
+        font-size: 28px;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        text-align: left;
+        text-transform: uppercase;
+    }
+}
+
+.wbf-concern {
+    h1 {
+        color: $stable !important;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase !important;        
+    }
+    .scroll-content {
+        background-color: lighten($royal, 3);
+    }
+
+}
+
+.wbf-pray {
+    h1 {
+        color: $stable !important;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase !important;        
+    }
+    .scroll-content {
+        background-color: lighten($royal, 3);
+    }
+
+}
+
+.wbf-prepare {
+    h1 {
+        color: $stable !important;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase !important;        
+    }
+    .scroll-content {
+        background-color: lighten($royal, 3);
+    }
+
 }
