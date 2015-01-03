@@ -1,53 +1,132 @@
+.wbf-menu {
+    .item {
+        color: $stable;
+        background-color: $dark;
+        border-color: #555555;
+    }
+    .item h3 {
+        color: $stable;
+    }
+    .item a {
+        background-color: $dark;        
+    }
+    .item-icon-left .icon-accessory, .item-icon-right .icon-accessory {
+        color: lighten($royal, 5);
+        font-size: 24px;
+        left: 11px;
+    }
+    .item-divider {
+        background-color: lighten($dark, 2);
+    }
+}
 .wbf-concerns {
     .scroll-content {
         background-color: lighten($royal, 3);
     }
     .item {
         color: $stable;
-        border-color: darken($stable, 30) !important;
-        font-size: 28px;
+        border: none;
+        // border-color: darken($stable, 30) !important; 
+        font-size: 22px;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 300;
         text-align: left;
         text-transform: uppercase;
+        min-height: 60px;
+        padding-top: 20px;
+    }
+    .item-icon-left .icon {
+        font-size: 24px;
+    }
+    .item-icon-right .icon-accessory {
+        font-size: 16px;
+    }
+    .item .badge {
+        top: 14px;
     }
 }
-
 .wbf-concern {
     h1 {
         color: $stable !important;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 300;
-        text-transform: uppercase !important;        
+        text-transform: uppercase !important;
     }
-    .scroll-content {
-        background-color: lighten($royal, 3);
-    }
-
+    // .scroll-content {
+    //     background-color: lighten($royal, 3);
+    // }
 }
-
 .wbf-pray {
     h1 {
         color: $stable !important;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 300;
-        text-transform: uppercase !important;        
+        text-transform: uppercase !important;
     }
     .scroll-content {
         background-color: lighten($royal, 3);
     }
-
 }
-
 .wbf-prepare {
     h1 {
         color: $stable !important;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 300;
-        text-transform: uppercase !important;        
+        text-transform: uppercase !important;
     }
     .scroll-content {
         background-color: lighten($royal, 3);
     }
+}
+.wbf-dashboard {
+    h1 {
+        color: $stable !important;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase !important;
+    }
+    .scroll-content {
+        background-color: $balanced;
+    }
+}
+.avatar {
+    display: block;
+    position: relative;
+    max-width: 32px;
+    max-height: 32px;
+    border-radius: 50%;
+    left: 11px;
+    margin-top: 7px;
+    text-align: center;
+}
+.bar-wbf {
+    border: none !important;
+}
 
+bar.bar-dashboard, bar.bar-dashboard .bar.bar-positive, .bar-dashboard .nav-bar-block ion-header-bar {
+    border-color: $balanced;
+    background-color: $balanced;
+    background-image: linear-gradient(0deg, $balanced, $balanced 50%, transparent 50%);
+}
+
+bar.bar-profile, bar.bar-profile .bar.bar-positive, .bar-profile .nav-bar-block ion-header-bar {
+    border-color: $dark;
+    background-color: $dark;
+    // background-image: linear-gradient(0deg, $balanced, $balanced 50%, transparent 50%);
+}
+
+bar.bar-concerns, bar.bar-concerns .bar.bar-positive, .bar-concerns .nav-bar-block ion-header-bar {
+    border-color: $royal;
+    background-color: $royal;
+}
+
+bar.bar-concern, bar.bar-concern .bar.bar-positive, .bar-concern .nav-bar-block ion-header-bar {
+    border-color: $royal;
+    background-color: $royal;
+}
+
+bar.bar-default, bar.bar-default .bar.bar-positive, .bar-default .nav-bar-block ion-header-bar {
+    border-color: $royal;
+    background-color: $royal;
+    // background-image: linear-gradient(0deg, #FF7148, #FF7148 50%, transparent 50%);
 }

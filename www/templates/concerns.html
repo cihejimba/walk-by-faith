@@ -4,11 +4,10 @@
             <ion-item ng-repeat="concern in concerns" 
                 back-color="{{ incrementColor($index, concerns.length) }}" 
                 class="wbf-list-item item-icon-left item-icon-right" 
-                ng-click="showConcern(concern)">
+                ng-click="showConcern(concern, incrementColor($index, concerns.length), concern.name)">
                 <i ng-class="'icon {{ concern.icon }}'"></i>
                 {{ concern.name }}
-                <!-- <span class="badge badge-calm">{{ getBadge(concern.$id) }}</span> -->
-                <span class="badge badge-calm"></span>
+                <span class="badge badge-calm">{{ getBadge(concern.$id) }}</span>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
         </ion-list>

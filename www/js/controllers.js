@@ -1,6 +1,6 @@
 angular.module('wbf.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $rootScope, $ionicModal, $timeout) {
     // Form data for the login modal
     $scope.loginData = {};
 
@@ -31,6 +31,32 @@ angular.module('wbf.controllers', [])
             $scope.closeLogin();
         }, 1000);
     };
+
+    $rootScope.bgColor = "#6964ff";
+
+})
+
+.controller('DashboardCtrl', function($scope, $rootScope, $stateParams, $ionicNavBarDelegate) {
+
+
+})
+
+.controller('PrepareCtrl', function($scope, $rootScope, $stateParams, $ionicNavBarDelegate) {
+
+    $scope.bgColor = $stateParams.color;
+
+})
+
+.controller('PrayCtrl', function($scope, $rootScope, $stateParams, $window, $ionicNavBarDelegate) {
+
+    $scope.bgColor = $stateParams.color;
+
+    $scope.openBible = function(passage) {
+        var bibleRef = "logosres:esv;ref=BibleESV.";
+        var url = bibleRef + passage;
+        $window.open(url, "_system");
+    }
+
 })
 
 .controller('ConcernsCtrl', function($scope, $state, $firebase, $translate, ColorService) {
@@ -42,17 +68,19 @@ angular.module('wbf.controllers', [])
     $scope.concerns = concernsArray;
 
     $scope.incrementColor = function(index, listCount) {
-        var startColor = "#6964ff";
-        var endColor = "#00009a";        
+        var startColor = "#7770ff";
+        // var startColor = "#b2ff1b";
+        var endColor = "#00009a";
+        // var endColor = "#22bbd5";
         var percent = (index / listCount) * -1;
         var newColor = ColorService.shadeBlend(percent, startColor, endColor);
         return newColor;
     }
 
-    $scope.getBadge = function(concernId) {
+    $scope.getBadge = function() {
         // put join logic here
-        var requestCount = Math.floor((Math.random()*20));
-        var prayedCount = Math.floor((Math.random()*10));
+        var requestCount = Math.floor((Math.random() * 20));
+        var prayedCount = Math.floor((Math.random() * 5));
         var badgeText = "";
         if (requestCount > 0 && requestCount < 15) {
             badgeText = requestCount.toString();
@@ -60,17 +88,44 @@ angular.module('wbf.controllers', [])
                 badgeText += " / " + prayedCount;
             }
         }
-        return badgeText;
+        // return badgeText;
+        return "";
     }
 
-    $scope.showConcern = function(concern) {
-        $state.go("app.concern", {"concern": concern });
+    $scope.showConcern = function(concernObj, bgColor, name) {
+        console.log('bgColor = ', bgColor);
+        $state.go("app.concern", {
+            concern: concernObj,
+            color: bgColor,
+            name: name
+        });
     }
 })
 
-.controller('ConcernCtrl', function($scope, $stateParams) {
-    
-    var concern = $stateParams.concern;
-    $scope.title = concern.name;
+.controller('ConcernCtrl', function($scope, $rootScope, $stateParams, $ionicNavBarDelegate) {
+
+    $scope.bgColor = $stateParams.color;
+    $scope.title = $stateParams.name;
+
+})
+
+.controller('ProfileCtrl', function($scope, $rootScope, $stateParams, $ionicNavBarDelegate) {
+
+
+})
+
+.controller('SettingsCtrl', function($scope, $rootScope, $stateParams, $ionicNavBarDelegate) {
+
+
+})
+
+.controller('HelpCtrl', function($scope, $rootScope, $stateParams, $ionicNavBarDelegate) {
+
+
+})
+
+.controller('AboutCtrl', function($scope, $rootScope, $stateParams, $ionicNavBarDelegate) {
+
 
 });
+

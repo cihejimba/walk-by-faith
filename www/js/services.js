@@ -14,9 +14,7 @@ angular.module("wbf.services", [])
 .directive('backColor', function() {
     return function(scope, element, attrs) {
         var color = attrs.backColor;
-        var content = element.find('a'); // only used if an anchor is present
         element.css({
-            'height': '50px',
             'background-color': color
         });
     };

@@ -16,7 +16,18 @@ angular.module('wbf', [
         }
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
-            StatusBar.styleDefault();
+            StatusBar.styleBlackTranslucent();
+        }
+    });
+})
+
+.run(function($state, $rootScope) {
+    $rootScope.$on('$stateChangeSuccess', function(evt, toState) {
+        if (toState.barClass) {
+            $rootScope.barClass = toState.barClass;
+        }
+        else {
+            $rootScope.barClass = "bar-default";
         }
     });
 })
@@ -31,43 +42,100 @@ angular.module('wbf', [
         controller: 'AppCtrl'
     })
 
+    .state('app.dashboard', {
+        url: "/dashboard",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/dashboard.html",
+                controller: 'DashboardCtrl'
+            }
+        },
+        barClass: 'bar-dashboard'
+    })
+
     .state('app.prepare', {
         url: "/prepare",
         views: {
             'menuContent': {
-                templateUrl: "templates/prepare.html"
+                templateUrl: "templates/prepare.html",
+                    controller: 'PrepareCtrl'
             }
         }
     })
 
     .state('app.pray', {
-            url: "/pray",
-            views: {
-                'menuContent': {
-                    templateUrl: "templates/pray.html"
-                }
+        url: "/pray",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/pray.html",
+                controller: 'PrayCtrl'                    
             }
-        })
-        .state('app.concerns', {
-            url: "/concerns",
-            views: {
-                'menuContent': {
-                    templateUrl: "templates/concerns.html",
-                    controller: 'ConcernsCtrl'
-                }
+        },
+        barClass: 'bar-pray'
+    })
+
+    .state('app.concerns', {
+        url: "/concerns",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/concerns.html",
+                controller: 'ConcernsCtrl'
             }
-        })
+        },
+        barClass: 'bar-concerns'
+    })
 
     .state('app.concern', {
-        url: "/concerns/:concern",
+        url: "/concerns/:concern/:color/:name",
         views: {
             'menuContent': {
                 templateUrl: "templates/concern.html",
                 controller: 'ConcernCtrl'
             }
+        },
+        barClass: 'bar-concern'
+    })
+
+    .state('app.profile', {
+        url: "/profile",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/profile.html",
+                controller: 'ProfileCtrl'
+            }
+        },
+        barClass: 'bar-profile'
+    })
+
+    .state('app.settings', {
+        url: "/settings",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/settings.html",
+                controller: 'SettingsCtrl'                    
+            }
+        }
+    })
+
+    .state('app.help', {
+        url: "/help",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/help.html",
+                controller: 'HelpCtrl'                    
+            }
+        }
+    })
+
+    .state('app.about', {
+        url: "/about",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/about.html",
+                controller: 'AboutCtrl'                    
+            }
         }
     });
-
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/concerns');
