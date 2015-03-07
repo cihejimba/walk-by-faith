@@ -20,10 +20,13 @@
     "angular-ui-router": "0.2.13",
     "angularfire": "~0.9.0",
     "firebase": "~2.0.6",
-    "angular-translate": "~2.5.2",
-    "ionicons": "~2.0.0"
+    "angular-translate": "~2.5.2"
   },
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.0.0-beta.14"
+    "ionic": "driftyco/ionic-bower#1.0.0-beta.14",
+    "ionic-ion-swipe-cards": "*",
+    "angular-translate": "~2.5.2",
+    "ngCordova": "~0.1.12-alpha",
+    "ui-router-extras": "~0.0.13"
   }
 }

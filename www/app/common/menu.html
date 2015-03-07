@@ -1,0 +1,59 @@
+<!-- <ion-side-menus enable-menu-with-back-views="false"> -->
+<ion-modal-view class="wbf-menu">
+
+    <ion-header-bar class="bar-dark">
+        <button class="button button-icon button-clear ion-ios-close-empty" ng-click="closeMenu()"></button>
+        <h1 class="title light" translate>APP_TITLE</h1>
+    </ion-header-bar>
+    
+    <ion-content class="dark-bg">
+        <ion-list>
+
+            <ion-item class="item-icon-left" ng-click="displayPage('profile')">
+                <img ng-src="{{ profile.avatar }}" class="icon avatar">
+                <h3>Mike Lallemont</h3>
+            </ion-item>
+
+            <ion-item class="item item-divider item-dark"></ion-item>
+
+            <ion-item class="item-icon-left" ng-click="displayPage('app.dashboard')">
+                <i class="icon ion-ios-speedometer-outline icon-accessory"></i> 
+                &nbsp;{{ 'MNU_DASHBOARD' | translate }}
+            </ion-item>
+
+            <ion-item class="item-icon-left" ng-click="displayPage('app.prepare')">
+                <i class="icon ion-ios-book-outline icon-accessory"></i>
+                &nbsp;{{ 'MNU_PREPARE' | translate }}
+            </ion-item>
+            <ion-item class="item-icon-left" ng-click="displayPage('app.guide')">
+                <i class="icon ion-ios-list-outline icon-accessory"></i> 
+                &nbsp;{{ 'MNU_GUIDE' | translate }}
+            </ion-item>
+            <ion-item class="item-icon-left" ng-click="displayPage('app.pray')">
+                <i class="icon ion-ios-flame-outline icon-accessory"></i>
+                &nbsp;{{ 'MNU_PRAY' | translate }}
+            </ion-item>
+
+            <ion-item class="item item-divider item-dark"></ion-item>
+
+            <ion-item class="item-icon-left" ng-click="displayPage('settings')">
+                <i class="icon ion-ios-gear-outline icon-accessory"></i>
+                &nbsp;{{ 'MNU_SETTINGS' | translate }}
+            </ion-item>
+            <ion-item class="item-icon-left" ng-click="displayPage('help')">
+                <i class="icon ion-ios-help-outline icon-accessory"></i>
+                &nbsp;{{ 'MNU_HELP' | translate }}
+            </ion-item>
+            <ion-item class="item-icon-left" ng-click="displayPage('about')">
+                <i class="icon ion-ios-information-outline icon-accessory"></i>
+                &nbsp;{{ 'MNU_ABOUT' | translate }}
+            </ion-item>
+            <!-- <ion-item class="item item-divider"></ion-item> -->
+            <ion-item class="item-icon-left" nav-clear menu-close ng-click="logout()">
+                <i class="icon ion-log-out icon-accessory"></i>
+                &nbsp;{{ 'MNU_LOGOUT' | translate }}
+            </ion-item>
+    
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

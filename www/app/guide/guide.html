@@ -1,0 +1,24 @@
+<ion-view view-title="{{ ::'MNU_GUIDE' | translate }}" class="wbf-concerns">
+    
+    <div class="bar-subtab bar-dark no-padding">
+        <div class="button-bar">
+            <a class="button button-dark" 
+                ng-disabled="button.disabled"
+                ng-repeat="button in subtabs"
+                ui-sref="{{ button.sref }}"
+                ui-sref-active="active"
+                ng-model="data.subtab">{{ ::button.text }}</a>
+        </div>
+    </div>
+
+    <ion-content class="has-subheader">
+
+        <ion-nav-view name="tab-guide-concerns"></ion-nav-view>
+
+        <ion-nav-view name="tab-guide-history"></ion-nav-view>
+
+        <ion-nav-view name="tab-guide-favorites"></ion-nav-view>
+
+    </ion-content>
+    
+</ion-view>

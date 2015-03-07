@@ -1,76 +1,210 @@
 {
-    "concerns": {
-        "addiction": {
-            "icon": "ion-flask",
-            "name": "Addiction"
+  "concerns" : {
+    "addiction" : {
+      "icon" : "ion-erlenmeyer-flask",
+      "name" : "CON_ADDICTION",
+      "sub_concerns" : {
+        "sub_concern_1" : {
+          "name" : "CON_ADDICTION_1",
+          "severity" : "1"
         },
-        "alcohol": {
-            "icon": "ion-wineglass",
-            "name": "Alcohol"
+        "sub_concern_2" : {
+          "name" : "CON_ADDICTION_2",
+          "severity" : "2"
         },
-        "anger": {
-            "icon": "ion-android-hand",
-            "name": "Anger"
-        },
-        "anxiety": {
-            "icon": "ion-alert-circled",
-            "name": "Anxiety"
-        },
-        "cheating": {
-            "icon": "ion-arrow-graph-down-left",
-            "name": "Cheating"
-        },
-        "debt": {
-            "icon": "ion-card",
-            "name": "Debt"
-        },
-        "depression": {
-            "icon": "ion-cloud",
-            "name": "Depression"
-        },
-        "grief": {
-            "icon": "ion-sad",
-            "name": "Grief"
-        },
-        "idolatry": {
-            "icon": "ion-trophy",
-            "name": "Idolatry"
-        },
-        "love": {
-            "icon": "ion-heart",
-            "name": "Love"
-        },
-        "lust": {
-            "icon": "ion-eye",
-            "name": "Lust"
-        },
-        "lying": {
-            "icon": "ion-flash",
-            "name": "Lying"
-        },
-        "marriage": {
-            "icon": "ion-person-stalker",
-            "name": "Marriage"
-        },
-        "mind": {
-            "icon": "ion-stats-bars",
-            "name": "Mind"
-        },
-        "money": {
-            "icon": "ion-cash",
-            "name": "Money"
-        },
-        "porno": {
-            "icon": "ion-aperture",
-            "name": "Pornography"
-        },
-        "sickness": {
-            "icon": "ion-medkit",
-            "name": "Sickness"
-        },
-        "stealing": {
-            "icon": "ion-unlocked",
-            "name": "Stealing"
+        "sub_concern_3" : {
+          "name" : "CON_ADDICTION_3",
+          "severity" : "3"
         }
+      }
+    },
+    "alcohol" : {
+      "icon" : "ion-wineglass",
+      "name" : "CON_ALCOHOL",
+      "sub_concerns" : {
+        "sub_concern_1" : {
+          "name" : "CON_ALCOHOL_1",
+          "severity" : "1"
+        },
+        "sub_concern_2" : {
+          "name" : "CON_ALCOHOL_2",
+          "severity" : "2"
+        },
+        "sub_concern_3" : {
+          "name" : "CON_ALCOHOL_3",
+          "severity" : "3"
+        }
+      }
+    },
+    "anger" : {
+      "icon" : "ion-android-hand",
+      "name" : "CON_ANGER",
+      "sub_concerns" : {
+        "sub_concern_1" : {
+          "name" : "CON_ANGER_1",
+          "severity" : "1"
+        },
+        "sub_concern_2" : {
+          "name" : "CON_ANGER_2",
+          "severity" : "2"
+        },
+        "sub_concern_3" : {
+          "name" : "CON_ANGER_3",
+          "severity" : "3"
+        }
+      }      
+    },
+    "anxiety" : {
+      "icon" : "ion-alert-circled",
+      "name" : "CON_ANXIETY",
+      "sub_concerns" : {
+        "sub_concern_1" : {
+          "name" : "CON_ANXIETY_1",
+          "severity" : "1"
+        },
+        "sub_concern_2" : {
+          "name" : "CON_ANXIETY_2",
+          "severity" : "2"
+        },
+        "sub_concern_3" : {
+          "name" : "CON_ANXIETY_3",
+          "severity" : "3"
+        }
+      }      
+    },
+    "cheating" : {
+      "icon" : "ion-arrow-graph-down-left",
+      "name" : "CON_CHEATING"
+    },
+    "debt" : {
+      "icon" : "ion-card",
+      "name" : "CON_DEBT"
+    },
+    "depression" : {
+      "icon" : "ion-cloud",
+      "name" : "CON_DEPRESSION"
+    },
+    "grief" : {
+      "icon" : "ion-sad",
+      "name" : "CON_GRIEF"
+    },
+    "hate" : {
+      "icon" : "ion-android-warning",
+      "name" : "CON_HATE"
+    },
+    "idolatry" : {
+      "icon" : "ion-trophy",
+      "name" : "CON_IDOLATRY"
+    },
+    "loneliness" : {
+      "icon" : "ion-person",
+      "name" : "CON_LONLINESS"
+    },
+    "love" : {
+      "icon" : "ion-heart",
+      "name" : "CON_LOVE"
+    },
+    "lust" : {
+      "icon" : "ion-eye",
+      "name" : "CON_LUST"
+    },
+    "lying" : {
+      "icon" : "ion-flash",
+      "name" : "CON_LYING"
+    },
+    "marriage" : {
+      "icon" : "ion-person-stalker",
+      "name" : "CON_MARRIAGE"
+    },
+    "mind" : {
+      "icon" : "ion-stats-bars",
+      "name" : "CON_MIND"
+    },
+    "money" : {
+      "icon" : "ion-cash",
+      "name" : "CON_MONEY"
+    },
+    "porno" : {
+      "icon" : "ion-aperture",
+      "name" : "CON_PORNOGRAPHY"
+    },
+    "sickness" : {
+      "icon" : "ion-medkit",
+      "name" : "CON_SICKNESS"
+    },
+    "stealing" : {
+      "icon" : "ion-unlocked",
+      "name" : "CON_STEALING"
     }
+  },
+  "prayers" : {
+    "requests" : {
+      "matching-criteria" : "a"
+    }
+  },
+  "guides" : {
+    "addiction": [
+        {
+            "passage" : "Gen.1.1-12",
+            "commentary" : "GCT_ADDICTION_1",
+            "severity" : "1"
+        },
+        {
+            "passage" : "John.3.16",
+            "commentary" : "GCT_ADDICTION_2",
+            "severity" : "1"
+        },
+        {
+            "passage" : "John.1.1",
+            "commentary" : "GCT_ADDICTION_3",
+            "severity" : "2"
+        },
+        {
+            "passage" : "Gen.6",
+            "commentary" : "GCT_ADDICTION_4",
+            "severity" : "3"
+        }
+    ],
+    "alcohol": [
+            {
+                "passage" : "Gen.2.2",
+                "commentary" : "GCT_ALCOHOL_1",
+                "severity" : "1"
+            },
+            {
+                "passage" : "John.3.16",
+                "commentary" : "GCT_ALCOHOL_2",
+                "severity" : "1"
+            },
+            {
+                "passage" : "John.1.1",
+                "commentary" : "GCT_ALCOHOL_3",
+                "severity" : "2"
+            },
+            {
+                "passage" : "Gen.6",
+                "commentary" : "GCT_ALCOHOL_4",
+                "severity" : "3"
+            }
+        ]
+  },
+  "users" : {
+    "simplelogin:2" : {
+      "firstname" : "Mike",
+      "lastname" : "Lallemont",
+      "email": "michael@lallemont.com",
+      "guide" : {
+        "history": [
+          { "concern": "anger" },
+          { "concern": "anxiety" },
+          { "concern": "alochol" }
+        ],
+        "favorites": [
+          { "concern": "depression" },
+          { "concern": "loniliness" },
+          { "concern": "alochol" }
+        ]
+      }
+    }
+  }
 }

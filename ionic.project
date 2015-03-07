@@ -1,4 +1,12 @@
 {
   "name": "walk-by-faith",
-  "app_id": "a11a6c35"
+  "app_id": "a11a6c35",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

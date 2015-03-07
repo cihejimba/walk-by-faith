@@ -1,0 +1,30 @@
+<ion-view view-title="{{ ::title | translate }}" class="wbf-concern" ng-style="{ 'background-color': bgColor }">
+
+    <ion-nav-buttons side="primary">
+    </ion-nav-buttons>
+
+    <ion-content class="padding light">
+
+        <div class="list wbf-options">
+            <div ng-repeat="sub_concern in concern.sub_concerns">
+                <a class="item item-icon-left" ng-click="selectOption(sub_concern)">
+                    <i ng-show="user.sub_concern === sub_concern" class="icon ion-ios-circle-filled"></i>
+                    <i ng-show="user.sub_concern != sub_concern" class="icon ion-ios-circle-outline"></i>
+                    {{ ::sub_concern.name | translate }}      
+                </a>
+            </div>
+        </div>
+
+        <div class="padding light" ng-repeat="guide in guides">
+            <h3 class="light">
+                {{ guide.passage }}
+            </h3>
+            <p class="light">
+                {{ guide.commentary | translate }}
+            </p>
+        </div>
+
+
+    </ion-content>
+
+</ion-view>

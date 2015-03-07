@@ -7,21 +7,52 @@
     .item h3 {
         color: $stable;
     }
-    .item a {
-        background-color: $dark;        
+    .item label {
+        background-color: $dark;
     }
     .item-icon-left .icon-accessory, .item-icon-right .icon-accessory {
         color: lighten($royal, 5);
         font-size: 24px;
         left: 11px;
     }
+}
+
+.wbf-options {
+    a.item {
+        text-overflow: initial;
+        white-space: initial;
+        color: $stable;
+        background-color: $dark;
+        border-color: #555555;
+        white-space: normal !important;
+        i.ion-ios-circle-filled {
+            color: $link-color;
+        }
+        i.ion-ios-circle-outline {
+            color: $link-color;
+        }
+    }
     .item-divider {
         background-color: lighten($dark, 2);
+        height: 10px;
+    }
+}
+
+.wbf-header-guide {
+    .bar {
+        border: none !important;
+        background-color: $royal;
+    }
+    .bar .title {
+        color: #ffffff;
+    }
+    .bar .button.button-clear {
+        color: $light;
     }
 }
 .wbf-concerns {
     .scroll-content {
-        background-color: lighten($royal, 3);
+        background-color: $dark;
     }
     .item {
         color: $stable;
@@ -44,6 +75,9 @@
     .item .badge {
         top: 14px;
     }
+    .pane {
+        background-color: $royal;
+    }
 }
 .wbf-concern {
     h1 {
@@ -52,9 +86,6 @@
         font-weight: 300;
         text-transform: uppercase !important;
     }
-    // .scroll-content {
-    //     background-color: lighten($royal, 3);
-    // }
 }
 .wbf-pray {
     h1 {
@@ -67,6 +98,18 @@
         background-color: lighten($royal, 3);
     }
 }
+.wbf-header-prepare {
+    .bar {
+        border: none !important;
+        background-color: lighten($positive, 3);
+    }
+    .bar .title {
+        color: #ffffff;
+    }
+    .bar .button.button-clear {
+        color: $light;
+    }
+}
 .wbf-prepare {
     h1 {
         color: $stable !important;
@@ -75,7 +118,32 @@
         text-transform: uppercase !important;
     }
     .scroll-content {
-        background-color: lighten($royal, 3);
+        background-color: lighten($positive, 3);
+    }
+}
+.wbf-header-default {
+    .bar {
+        background-color: transparent;
+        background-image: none;
+        border: none !important;
+    }
+    .bar .title {
+        color: #eee;
+    }
+    .bar .button.button-clear {
+        color: $light;
+    }
+}
+.wbf-header-dashboard {
+    .bar {
+        border: none !important;
+        background-color: darken($balanced, 7);
+    }
+    .bar .title {
+        color: #eee;
+    }
+    .bar .button.button-clear {
+        color: #ffffff;
     }
 }
 .wbf-dashboard {
@@ -86,9 +154,48 @@
         text-transform: uppercase !important;
     }
     .scroll-content {
-        background-color: $balanced;
+        background-color: darken($balanced, 7);
     }
 }
+.wbf-login {
+    .login-div {
+        min-height: 200px;
+        background-color: $royal;
+    }
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.bar-subtab {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+  border-width: 0;
+  border-style: none;
+  top: 44px;
+  display: block;
+  height: 44px; 
+}
+
+.align-center {
+  position: fixed;
+  left: 50%;
+  top: 25px;
+  width: 128px;
+  height: 128px;
+  margin-left: -64px;
+}
+
 .avatar {
     display: block;
     position: relative;
@@ -99,34 +206,137 @@
     margin-top: 7px;
     text-align: center;
 }
-.bar-wbf {
-    border: none !important;
+.avatar-large {
+  display: block;
+  position: relative;
+  max-width: 128px;
+  max-height: 128px;
+  border-radius: 50%;
+  text-align: center; 
 }
 
-bar.bar-dashboard, bar.bar-dashboard .bar.bar-positive, .bar-dashboard .nav-bar-block ion-header-bar {
-    border-color: $balanced;
-    background-color: $balanced;
-    background-image: linear-gradient(0deg, $balanced, $balanced 50%, transparent 50%);
+.ion-ios7-arrow-back:before {
+  content: "\f3cf"; 
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
-bar.bar-profile, bar.bar-profile .bar.bar-positive, .bar-profile .nav-bar-block ion-header-bar {
-    border-color: $dark;
-    background-color: $dark;
-    // background-image: linear-gradient(0deg, $balanced, $balanced 50%, transparent 50%);
-}
+// css from swipe card
+/* Your app's CSS, go crazy, make it your own */
 
-bar.bar-concerns, bar.bar-concerns .bar.bar-positive, .bar-concerns .nav-bar-block ion-header-bar {
-    border-color: $royal;
-    background-color: $royal;
-}
 
-bar.bar-concern, bar.bar-concern .bar.bar-positive, .bar-concern .nav-bar-block ion-header-bar {
-    border-color: $royal;
-    background-color: $royal;
-}
+    .ionic-logo {
+      display: block;
+      margin: 15px auto;
+      width: 96px;
+      height: 96px;
+    }
 
-bar.bar-default, bar.bar-default .bar.bar-positive, .bar-default .nav-bar-block ion-header-bar {
-    border-color: $royal;
-    background-color: $royal;
-    // background-image: linear-gradient(0deg, #FF7148, #FF7148 50%, transparent 50%);
-}
+    .pane {
+      background-color: #333;
+    }
+
+    .bar.bar-transparent {
+      background-color: transparent;
+      background-image: none;
+      border: none;
+    }
+
+    .bar .title {
+      color: #eee;
+    }
+
+    .swipe-cards {
+      position: fixed;
+    }
+
+    swipe-card {
+      display: none;
+      position: fixed;
+      -webkit-transform: scale(1,1);
+      // left: 50%;
+      // top: 35%;
+      // width: 300px;
+      // height: 300px;
+      // margin-left: -150px;
+      // margin-top: -150px;
+      left: 20px;
+      top: 50%;
+      width: 90%;
+      height: 300px;
+      margin-left: 0px;
+      margin-top: -150px;
+      box-sizing: border-box;
+      background-color: rgb(255,255,255);
+      border-radius: 4px;
+      overflow: hidden;
+      -webkit-animation-fill-mode: forwards;
+    }
+
+    swipe-card .title {
+      height: 40px;
+      padding: 5px;
+      line-height: 30px;
+      color: #444;
+    }
+    swipe-card .image {
+      overflow: hidden;
+      max-height: 210px;
+    }
+    swipe-card .button {
+      border: none;
+    }
+    swipe-card .image img {
+      width: 100%;
+      border-radius: 0px 0px 4px 4px;
+    }
+
+    #start-card {
+      color: #fff;
+      background-color: #30BD8A;
+      line-height: 300px;
+      word-wrap: break-word;
+      border: 6px solid #4CD68E;
+      text-align: center;
+    }
+    #start-card span {
+      display: inline-block;
+      line-height: 40px;
+      width: 200px;
+      font-size: 30px;
+      vertical-align: middle;
+    }
+
+    #footer .button {
+      color: #fff;
+    }
+
+    @-webkit-keyframes bounceIn {
+      0% {
+        -webkit-transform: scale(0,0);
+      }
+      70% {
+        -webkit-transform: scale(1.2,1.2);
+      }
+      100% {
+        -webkit-transform: scale(1,1);
+      }
+    }
+
+    swipe-card.pop-in-start {
+      -webkit-transform: scale(0,0);
+    }
+    swipe-card.pop-in {
+      -webkit-animation: bounceIn 0.4s ease-out;
+    }
+
+

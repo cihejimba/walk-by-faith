@@ -1,0 +1,20 @@
+<ion-modal-view class="wbf-login">
+  <ion-content>
+    <div class="login-div">
+
+    </div>
+
+    <form ng-submit="login()">
+      <div class="list">
+        <label class="item item-input">
+          <input type="email" ng-model="loginData.username" placeholder="Email Address">
+        </label>
+        <label class="item item-input">
+          <input type="password" ng-model="loginData.password" placeholder="Password">
+        </label>
+        <button class="button button-full button-positive" type="submit">Log In</button>
+        <button class="button button-full button-outline button-positive">Sign Up</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
